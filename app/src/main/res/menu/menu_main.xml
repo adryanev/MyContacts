@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.adryanev.dicoding.mycontacts.ui.MainActivity">
+    <item android:id="@+id/action_profil"
+		  android:title="@string/profile_title"
+		  android:orderInCategory="100"
+		  android:icon="@drawable/ic_person_white_24dp"
+		  android:iconTint="@color/colorSecondaryText"
+		  app:showAsAction="always" tools:targetApi="o"/>
+</menu>

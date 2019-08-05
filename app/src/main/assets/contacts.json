@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "nama": "Adryan Eka Vandra",
+    "jenisKelamin": "Laki-laki",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/5/55/Apple_orchard_in_Tasmania.jpg",
+    "nomorHp": "082174969356",
+    "alamat": "Pekanbaru",
+    "email": "adryanekavandra@gmail.com"
+  },
+  {
+    "id": 2,
+    "nama": "Karsana Tarihoran",
+    "jenisKelamin": "Laki-laki",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/5/55/Apple_orchard_in_Tasmania.jpg",
+    "nomorHp": "07508066000",
+    "alamat": "Pontianak",
+    "email": "suryono.kezia@yahoo.co.id"
+  },
+  {
+    "id": 3,
+    "nama": "Warsita Pangestu S.IP",
+    "jenisKelamin": "Laki-laki",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/5/55/Apple_orchard_in_Tasmania.jpg",
+    "nomorHp": "09285951799",
+    "alamat": "Batam",
+    "email": "astuti.himawan@mangunsong.asia"
+  },
+  {
+    "id": 4,
+    "nama": "Genta Laksita",
+    "jenisKelamin": "Perempuan",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/5/55/Apple_orchard_in_Tasmania.jpg",
+    "nomorHp": "04240259103",
+    "alamat": "Palangka Raya",
+    "email": "gabriella.pradipta@rahayu.name"
+  },
+  {
+    "id": 5,
+    "nama": "Fathonah Permata",
+    "jenisKelamin": "Perempuan",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/5/55/Apple_orchard_in_Tasmania.jpg",
+    "nomorHp": "+623058803122",
+    "alamat": "Dumai",
+    "email": "leo67@gmail.co.id"
+  },
+  {
+    "id": 6,
+    "nama": "Kalim Zulkarnain",
+    "jenisKelamin": "Laki-laki",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/5/55/Apple_orchard_in_Tasmania.jpg",
+    "nomorHp": "09285951799",
+    "alamat": "Batam",
+    "email": "astuti.himawan@mangunsong.asia"
+  },
+  {
+    "id": 7,
+    "nama": "Yusuf Suwarno",
+    "jenisKelamin": "Laki-laki",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/5/55/Apple_orchard_in_Tasmania.jpg",
+    "nomorHp": "+626225831352",
+    "alamat": "Pasuruan",
+    "email": "lutfan.hariyah@nainggolan.ac.id"
+  },
+  {
+    "id": 8,
+    "nama": "Eka Zulaika",
+    "jenisKelamin": "Perempuan",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/5/55/Apple_orchard_in_Tasmania.jpg",
+    "nomorHp": "+6288114167748",
+    "alamat": "Bitung",
+    "email": "hutapea.humaira@pratiwi.desa.id"
+  },
+  {
+    "id": 9,
+    "nama": "Halim Wibowo S.Pt",
+    "jenisKelamin": "Laki-laki",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/5/55/Apple_orchard_in_Tasmania.jpg",
+    "nomorHp": "095169328950",
+    "alamat": "Payakumbuh",
+    "email": "maryanto77@yahoo.com"
+  },
+  {
+    "id": 10,
+    "nama": "Vivi Farida",
+    "jenisKelamin": "Perempuan",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/5/55/Apple_orchard_in_Tasmania.jpg",
+    "nomorHp": "+6236206283433",
+    "alamat": "Bau-Bau",
+    "email": "tasdik74@fujiati.biz.id"
+  }
+]

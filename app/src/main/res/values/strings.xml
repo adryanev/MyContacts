@@ -1,0 +1,9 @@
+<resources>
+	<string name="app_name">MyContacts</string>
+	<string name="action_settings">Settings</string>
+	<string name="hello_blank_fragment">Hello World</string>
+	<string name="contact_title">Kontak</string>
+	<string name="contact_list_title">Daftar Kontak</string>
+	<string name="contact_detail_title">Detail Kontak</string>
+	<string name="profile_title">Profil</string>
+</resources>

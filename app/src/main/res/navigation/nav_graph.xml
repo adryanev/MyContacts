@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/mainFragment">
+
+    <fragment android:id="@+id/mainFragment"
+              android:name="com.adryanev.dicoding.mycontacts.ui.main.MainFragment"
+              android:label="@string/contact_title"
+              tools:layout="@layout/fragment_main">
+
+        <action android:id="@+id/action_mainFragment_to_contactDetailFragment"
+                app:destination="@id/contactDetailFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
+
+        <action android:id="@+id/action_mainFragment_to_profilFragment"
+                app:destination="@id/profilFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:id="@+id/contactDetailFragment"
+              android:name="com.adryanev.dicoding.mycontacts.ui.detail.ContactDetailFragment"
+              android:label="@string/contact_detail_title"
+              tools:layout="@layout/fragment_contact_detail"/>
+
+    <fragment android:id="@+id/profilFragment"
+              android:name="com.adryanev.dicoding.mycontacts.ui.profil.ProfilFragment"
+              android:label="@string/profile_title"
+              tools:layout="@layout/fragment_profil"/>
+</navigation>
