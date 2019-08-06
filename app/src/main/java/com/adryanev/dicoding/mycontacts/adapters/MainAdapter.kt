@@ -7,7 +7,6 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.adryanev.dicoding.mycontacts.bindings.MainActivityBindings
 import com.adryanev.dicoding.mycontacts.data.entities.Contact
 import com.adryanev.dicoding.mycontacts.databinding.MainContactItemBinding
 import com.adryanev.dicoding.mycontacts.ui.main.MainFragmentDirections

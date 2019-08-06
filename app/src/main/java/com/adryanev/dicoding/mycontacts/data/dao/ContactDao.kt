@@ -7,7 +7,7 @@ import com.adryanev.dicoding.mycontacts.data.entities.Contact
 @Dao
 interface ContactDao {
 
-    @Query("SELECT * FROM contacts WHERE nama LIKE 'K%' ORDER BY nama ")
+    @Query("SELECT * FROM contacts ORDER BY nama")
     fun getContacts(): LiveData<List<Contact>>
 
     @Query("SELECT * FROM contacts WHERE id = :id")
