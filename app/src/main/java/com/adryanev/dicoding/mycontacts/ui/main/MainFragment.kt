@@ -6,6 +6,7 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 
 import com.adryanev.dicoding.mycontacts.R
@@ -35,6 +36,10 @@ class MainFragment : Fragment() {
 
         val adapter = MainAdapter()
         binding.rvContactList.adapter = adapter
+        binding.mainFab.setOnClickListener {
+            val directions = MainFragmentDirections.actionMainFragmentToCreateContactFragment()
+            it.findNavController().navigate(directions)
+        }
 
         subscribeUi(adapter)
         setHasOptionsMenu(true)

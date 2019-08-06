@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+			 xmlns:tools="http://schemas.android.com/tools"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+			 tools:context=".ui.createcontact.CreateContactFragment">
+	<data>
+		<variable name="vm" type="com.adryanev.dicoding.mycontacts.viewmodels.CreateContactViewModel"/>
+	</data>
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_marginTop="?actionBarSize"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginStart="16dp"
+			android:layout_marginEnd="16dp"
+	>
+
+		<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				app:layout_constraintTop_toTopOf="parent"
+				android:layout_marginStart="8dp"
+				app:layout_constraintStart_toStartOf="parent"
+				android:layout_marginEnd="8dp"
+				app:layout_constraintEnd_toEndOf="parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:hint="@string/nama_lengkap"
+				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+				android:id="@+id/create_nama_layout"
+		>
+			<com.google.android.material.textfield.TextInputEditText
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:inputType="textPersonName"
+					android:text="@={vm.nama}"
+					android:id="@+id/create_nama_edit_text"
+					android:layout_marginTop="8dp"
+					android:drawableStart="@drawable/ic_contact_phone_black_24dp"
+					android:drawableTint="@color/colorSecondary"
+					android:drawablePadding="8dp"
+					tools:targetApi="m"/>
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				app:layout_constraintStart_toStartOf="@+id/create_nama_layout"
+				app:layout_constraintEnd_toEndOf="@+id/create_nama_layout"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:hint="@string/nomor_hp"
+				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+				android:id="@+id/create_nomor_hp_layout"
+				app:layout_constraintTop_toBottomOf="@+id/create_nama_layout">
+			<com.google.android.material.textfield.TextInputEditText
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:inputType="phone"
+					android:id="@+id/create_nomor_hp_edit_text"
+					android:layout_marginTop="8dp"
+					android:drawableStart="@drawable/ic_phone_white_24dp"
+					android:drawableTint="@color/colorSecondary"
+					android:drawablePadding="8dp"
+					android:text="@={vm.nomorHp}"
+					tools:targetApi="m"/>
+		</com.google.android.material.textfield.TextInputLayout>
+		<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				app:layout_constraintStart_toStartOf="@+id/create_nomor_hp_layout"
+				app:layout_constraintEnd_toEndOf="@+id/create_nomor_hp_layout"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:hint="@string/email"
+				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+				android:id="@+id/create_email_layout"
+				app:layout_constraintTop_toBottomOf="@+id/create_nomor_hp_layout"
+				app:layout_constraintHorizontal_bias="0.375">
+			<com.google.android.material.textfield.TextInputEditText
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:inputType="textEmailAddress"
+					android:id="@+id/create_email_edit_text"
+					android:layout_marginTop="8dp"
+					android:drawableStart="@drawable/ic_email_black_24dp"
+					android:drawableTint="@color/colorSecondary"
+					android:drawablePadding="8dp"
+					android:text="@={vm.email}"
+					tools:targetApi="m"/>
+		</com.google.android.material.textfield.TextInputLayout>
+		<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				app:layout_constraintStart_toStartOf="@+id/create_email_layout"
+				app:layout_constraintEnd_toEndOf="@+id/create_email_layout"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:hint="@string/alamat"
+				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+				android:id="@+id/create_alamat_layout"
+				app:layout_constraintTop_toBottomOf="@+id/create_email_layout"
+				app:layout_constraintHorizontal_bias="0.0">
+			<com.google.android.material.textfield.TextInputEditText
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:inputType="textPostalAddress"
+					android:ems="10"
+					android:id="@+id/create_alamat_edit_text"
+					android:layout_marginTop="8dp"
+					android:drawableStart="@drawable/ic_location_city_black_24dp"
+					android:drawableTint="@color/colorSecondary"
+					android:drawablePadding="8dp"
+					android:text="@={vm.alamat}"
+					tools:targetApi="m"/>
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<com.google.android.material.button.MaterialButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+				android:text="@string/simpan"
+				android:onClick="@{(v) -> vm.onClick(v)}"
+				app:layout_constraintStart_toStartOf="@+id/create_alamat_layout"
+				app:layout_constraintEnd_toEndOf="@+id/create_alamat_layout" android:layout_marginTop="24dp"
+				app:layout_constraintTop_toBottomOf="@+id/create_alamat_layout"
+				app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="24dp"
+				app:layout_constraintVertical_bias="0.01999998" android:id="@+id/cr"/>
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

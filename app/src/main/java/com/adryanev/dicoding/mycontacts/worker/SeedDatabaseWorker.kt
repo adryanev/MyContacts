@@ -1,9 +1,7 @@
 package com.adryanev.dicoding.mycontacts.worker
 
 import android.content.Context
-import android.util.Log
 import androidx.work.CoroutineWorker
-import androidx.work.Worker
 import androidx.work.WorkerParameters
 import com.adryanev.dicoding.mycontacts.data.ContactDatabase
 import com.adryanev.dicoding.mycontacts.data.entities.Contact

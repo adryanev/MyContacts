@@ -1,19 +1,18 @@
-package com.adryanev.dicoding.mycontacts.adapters
+package com.adryanev.dicoding.mycontacts.bindings
 
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.hbb20.GThumb
 import de.hdodenhof.circleimageview.CircleImageView
 
-@BindingAdapter("imageFromUrl")
-fun bindImageFromUrl(view: CircleImageView, imageUrl: String?){
-    if(!imageUrl.isNullOrEmpty()){
-        Glide.with(view.context)
-            .load(imageUrl)
-            .transition(DrawableTransitionOptions.withCrossFade())
-            .into(view)
+@BindingAdapter("imageFromName")
+fun bindImageFromName(view: GThumb, name: String?){
+    if(!name.isNullOrEmpty()){
+        view.loadThumbForName("",name)
     }
+
 }
 
 @BindingAdapter("isGone")

@@ -6,4 +6,17 @@
 	<string name="contact_list_title">Daftar Kontak</string>
 	<string name="contact_detail_title">Detail Kontak</string>
 	<string name="profile_title">Profil</string>
+	<string name="profilimage">profilImage</string>
+	<string name="adryan_eka_vandra">Adryan Eka Vandra</string>
+	<string name="adryanekavandra_gmail_com">adryanekavandra@gmail.com</string>
+	<string name="telepon">Telepon</string>
+	<string name="sms">SMS</string>
+	<string name="edit_kontak">Edit Kontak</string>
+	<string name="nama_lengkap">Nama Lengkap</string>
+	<string name="nomor_hp">Nomor Hp</string>
+	<string name="email">Email</string>
+	<string name="alamat">Alamat</string>
+	<string name="simpan">Simpan</string>
+	<string name="tambah_kontak">Tambah Kontak</string>
+	<string name="hapus_kontak">Hapus Kontak</string>
 </resources>
