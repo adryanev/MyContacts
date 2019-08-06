@@ -23,16 +23,27 @@
                 app:exitAnim="@anim/slide_out_left"
                 app:popEnterAnim="@anim/slide_in_left"
                 app:popExitAnim="@anim/slide_out_right" />
-    </fragment>
+		<action android:id="@+id/action_mainFragment_to_createContactFragment"
+				app:destination="@id/createContactFragment"/>
+	</fragment>
     <fragment android:id="@+id/contactDetailFragment"
               android:name="com.adryanev.dicoding.mycontacts.ui.detail.ContactDetailFragment"
               android:label="@string/contact_detail_title"
               tools:layout="@layout/fragment_contact_detail">
 		<argument android:name="id" app:argType="integer"/>
+		<action android:id="@+id/action_contactDetailFragment_to_editContactFragment"
+				app:destination="@id/editContactFragment"/>
 	</fragment>
 
     <fragment android:id="@+id/profilFragment"
               android:name="com.adryanev.dicoding.mycontacts.ui.profil.ProfilFragment"
               android:label="@string/profile_title"
               tools:layout="@layout/fragment_profil"/>
+	<fragment android:id="@+id/createContactFragment"
+			  android:name="com.adryanev.dicoding.mycontacts.ui.createcontact.CreateContactFragment"
+			  android:label="@string/tambah_kontak" tools:layout="@layout/fragment_create_contact"/>
+	<fragment android:id="@+id/editContactFragment" android:name="com.adryanev.dicoding.mycontacts.ui.editcontact.EditContactFragment"
+			  android:label="@string/edit_kontak" tools:layout="@layout/fragment_edit_contact">
+		<argument android:name="id" app:argType="integer"/>
+	</fragment>
 </navigation>

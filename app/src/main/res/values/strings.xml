@@ -12,4 +12,11 @@
 	<string name="telepon">Telepon</string>
 	<string name="sms">SMS</string>
 	<string name="edit_kontak">Edit Kontak</string>
+	<string name="nama_lengkap">Nama Lengkap</string>
+	<string name="nomor_hp">Nomor Hp</string>
+	<string name="email">Email</string>
+	<string name="alamat">Alamat</string>
+	<string name="simpan">Simpan</string>
+	<string name="tambah_kontak">Tambah Kontak</string>
+	<string name="hapus_kontak">Hapus Kontak</string>
 </resources>

@@ -50,6 +50,7 @@
                                                                app:layout_constraintEnd_toStartOf="@+id/detail_message_button"
                                                                app:icon="@drawable/ic_phone_white_24dp"
                                                                android:layout_marginTop="16dp"
+                                                               style="@style/Widget.MaterialComponents.Button.OutlinedButton"
 
                                                                android:text="@string/telepon"/>
             <com.google.android.material.button.MaterialButton android:layout_width="wrap_content"
@@ -62,6 +63,7 @@
                                                                android:id="@+id/detail_message_button"
                                                                app:layout_constraintHorizontal_bias="0.5"
                                                                app:icon="@drawable/ic_message_black_24dp"
+                                                               style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                                                                android:text="@string/sms"/>
             <View
                     style="@style/Divider" android:id="@+id/view2"
@@ -90,9 +92,24 @@
                     android:drawableStart="@drawable/ic_email_black_24dp"
                     android:drawablePadding="16dp"
                     android:drawableTint="@color/colorSecondary"
-                    app:layout_constraintEnd_toEndOf="@+id/detail_nomorHp" android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintEnd_toEndOf="@+id/detail_nomorHp"
+					android:layout_marginBottom="8dp"
+                    app:layout_constraintVertical_bias="0.0"
                     android:layout_marginTop="16dp" tools:text="@string/adryanekavandra_gmail_com"
+                    app:layout_constraintHorizontal_bias="0.0" tools:targetApi="m"/>
+            <TextView
+                    android:text="@{vm.contact.alamat}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/detail_alamat"
+                    app:layout_constraintTop_toBottomOf="@+id/detail_email"
+                    app:layout_constraintStart_toStartOf="@+id/detail_email"
+                    android:drawableStart="@drawable/ic_location_city_black_24dp"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/colorSecondary"
+                    app:layout_constraintEnd_toEndOf="@+id/detail_email" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"
+                    android:layout_marginTop="16dp" tools:text="@tools:sample/cities"
                     app:layout_constraintHorizontal_bias="0.0" tools:targetApi="m"/>
             <ImageButton
                     android:layout_width="wrap_content"

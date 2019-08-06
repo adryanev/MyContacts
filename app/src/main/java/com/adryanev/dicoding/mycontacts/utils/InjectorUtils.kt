@@ -4,6 +4,8 @@ import android.content.Context
 import com.adryanev.dicoding.mycontacts.data.ContactDatabase
 import com.adryanev.dicoding.mycontacts.data.ContactRepository
 import com.adryanev.dicoding.mycontacts.viewmodels.ContactDetailViewModelFactory
+import com.adryanev.dicoding.mycontacts.viewmodels.CreateContactViewModelFactory
+import com.adryanev.dicoding.mycontacts.viewmodels.EditContactViewModelFactory
 import com.adryanev.dicoding.mycontacts.viewmodels.MainViewModelFactory
 
 object InjectorUtils {
@@ -21,5 +23,16 @@ object InjectorUtils {
     fun provideDetailContactViewModelFactory(context: Context, contactId: Int): ContactDetailViewModelFactory{
         return ContactDetailViewModelFactory(getContactRepository(context),contactId)
     }
+
+    fun provideCreateContactViewModelFactory(context: Context) : CreateContactViewModelFactory{
+        val repository = getContactRepository(context)
+        return CreateContactViewModelFactory(repository)
+    }
+
+    fun provideEditContactViewModelFactory(context: Context, contactId: Int) : EditContactViewModelFactory{
+        val repository = getContactRepository(context)
+        return EditContactViewModelFactory(repository,contactId)
+    }
+
 
 }
