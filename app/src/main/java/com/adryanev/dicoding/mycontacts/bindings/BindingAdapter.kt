@@ -1,4 +1,4 @@
-package com.adryanev.dicoding.mycontacts.adapters
+package com.adryanev.dicoding.mycontacts.bindings
 
 import android.view.View
 import androidx.databinding.BindingAdapter

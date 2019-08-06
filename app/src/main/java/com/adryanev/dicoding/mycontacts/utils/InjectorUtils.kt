@@ -3,6 +3,7 @@ package com.adryanev.dicoding.mycontacts.utils
 import android.content.Context
 import com.adryanev.dicoding.mycontacts.data.ContactDatabase
 import com.adryanev.dicoding.mycontacts.data.ContactRepository
+import com.adryanev.dicoding.mycontacts.viewmodels.ContactDetailViewModelFactory
 import com.adryanev.dicoding.mycontacts.viewmodels.MainViewModelFactory
 
 object InjectorUtils {
@@ -15,6 +16,10 @@ object InjectorUtils {
     fun provideMainViewModelFactory(context: Context) : MainViewModelFactory{
         val repository = getContactRepository(context)
         return MainViewModelFactory(repository)
+    }
+
+    fun provideDetailContactViewModelFactory(context: Context, contactId: Int): ContactDetailViewModelFactory{
+        return ContactDetailViewModelFactory(getContactRepository(context),contactId)
     }
 
 }

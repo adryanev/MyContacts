@@ -10,9 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.adryanev.dicoding.mycontacts.bindings.MainActivityBindings
 import com.adryanev.dicoding.mycontacts.data.entities.Contact
 import com.adryanev.dicoding.mycontacts.databinding.MainContactItemBinding
+import com.adryanev.dicoding.mycontacts.ui.main.MainFragmentDirections
 
 class MainAdapter : ListAdapter<Contact, MainAdapter.ContactViewHolder>(ContactDiffCallback()){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
+
         return ContactViewHolder(MainContactItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
@@ -20,11 +22,14 @@ class MainAdapter : ListAdapter<Contact, MainAdapter.ContactViewHolder>(ContactD
         val contact = getItem(position)
         holder.apply {
             bind(createOnClickListener(contact.id),contact)
+
         }
+
     }
     private fun createOnClickListener(contactId: Int): View.OnClickListener {
         return View.OnClickListener {
-
+            val direction = MainFragmentDirections.actionMainFragmentToContactDetailFragment(contactId)
+            it.findNavController().navigate(direction)
         }
     }
 
@@ -34,8 +39,10 @@ class MainAdapter : ListAdapter<Contact, MainAdapter.ContactViewHolder>(ContactD
             binding.apply {
                 clicklistener = listener
                 contact = item
+                this.mainContactAvatar.loadThumbForName("",item.nama)
                 executePendingBindings()
             }
+
         }
     }
 

@@ -27,7 +27,9 @@
     <fragment android:id="@+id/contactDetailFragment"
               android:name="com.adryanev.dicoding.mycontacts.ui.detail.ContactDetailFragment"
               android:label="@string/contact_detail_title"
-              tools:layout="@layout/fragment_contact_detail"/>
+              tools:layout="@layout/fragment_contact_detail">
+		<argument android:name="id" app:argType="integer"/>
+	</fragment>
 
     <fragment android:id="@+id/profilFragment"
               android:name="com.adryanev.dicoding.mycontacts.ui.profil.ProfilFragment"

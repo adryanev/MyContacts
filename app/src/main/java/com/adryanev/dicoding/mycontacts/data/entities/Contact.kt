@@ -11,7 +11,6 @@ data class Contact(
     val id: Int,
     val nama: String,
     val jenisKelamin: String,
-    val foto: String,
     val nomorHp: String,
     val alamat: String,
     val email: String){
