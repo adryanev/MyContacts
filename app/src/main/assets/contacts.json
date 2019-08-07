@@ -69,5 +69,40 @@
     "nomorHp": "+6236206283433",
     "alamat": "Bau-Bau",
     "email": "tasdik74@fujiati.biz.id"
-  }
+  },
+  {
+    "id": 11,
+    "nama": "Queen Yulianti",
+    "nomorHp": "+62519845581273",
+    "alamat": "Cirebon",
+    "email": "wahyuni.aisyah@yahoo.co.id"
+  },
+  {
+    "id": 12,
+    "nama": "Fitriani Mayasari S.E.I",
+    "nomorHp": "+6239268936019",
+    "alamat": "Denpasar",
+    "email": "cindy.agustina@wastuti.biz.id"
+  },
+  {
+    "id": 13,
+    "nama": "Vanesa Umi Fujiati",
+    "nomorHp": "0844596179",
+    "alamat": "Subulussalam",
+    "email": "malika.simbolon@haryanto.sch.id"
+  },
+  {
+    "id": 14,
+    "nama": "Rafi Sitorus",
+    "nomorHp": "0874140008",
+    "alamat": "Balikpapan",
+    "email": "kurnia.halimah@maryati.ac.id"
+  },
+  {
+  "id": 15,
+  "nama": "Karma Saptono",
+  "nomorHp": "09461282365",
+  "alamat": "Bukittinggi",
+  "email": "lprakasa@napitupulu.tv"
+}
 ]

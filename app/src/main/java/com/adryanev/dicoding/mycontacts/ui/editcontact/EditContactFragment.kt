@@ -17,7 +17,7 @@ import androidx.navigation.fragment.navArgs
 import com.adryanev.dicoding.mycontacts.databinding.FragmentEditContactBinding
 import com.adryanev.dicoding.mycontacts.utils.InjectorUtils
 import com.adryanev.dicoding.mycontacts.viewmodels.EditContactViewModel
-import timber.log.Timber
+import androidx.lifecycle.Observer
 import java.util.*
 
 /**
@@ -35,14 +35,33 @@ class EditContactFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Timber.d("ON CREATE EDIT CONTACT")
         val binding = FragmentEditContactBinding.inflate(inflater, container, false).apply {
             vm = viewModel
             lifecycleOwner = this@EditContactFragment
         }
 
-        viewModel.getContact().observe(this,androidx.lifecycle.Observer {
-            if(TextUtils.isEmpty(Objects.requireNonNull(it).email)){
+        viewModel.data.observe(this , Observer{
+
+            binding.apply{
+                editNamaEditText.setText(it.nama)
+                editNomorHpEditText.setText(it.nomorHp)
+                editEmailEditText.setText(it.email)
+                editAlamatEditText.setText(it.alamat)
+            }
+        })
+        viewModel.saveContact().observe(this,Observer {
+
+            if(TextUtils.isEmpty(Objects.requireNonNull(it).nama)){
+            binding.editNamaEditText.error = "Nama Tidak Boleh Kosong"
+            binding.editNamaEditText.requestFocus()
+            }
+            else if(TextUtils.isEmpty(Objects.requireNonNull(it).nomorHp)){
+                binding.editNomorHpEditText.error = "Nomor Hp Tidak Boleh Kosong"
+                binding.editNomorHpEditText.requestFocus()
+            }
+
+
+            else if(TextUtils.isEmpty(Objects.requireNonNull(it).email)){
                 binding.editEmailEditText.error = "Email tidak boleh kosong"
                 binding.editEmailEditText.requestFocus()
             }
@@ -50,16 +69,6 @@ class EditContactFragment : Fragment() {
                 binding.editEmailEditText.error = "Email tidak valid"
                 binding.editEmailEditText.requestFocus()
             }
-            else if(TextUtils.isEmpty(Objects.requireNonNull(it).nomorHp)){
-                binding.editNomorHpEditText.error = "Nomor Hp Tidak Boleh Kosong"
-                binding.editNomorHpEditText.requestFocus()
-            }
-
-            else if(TextUtils.isEmpty(Objects.requireNonNull(it).nama)){
-                binding.editNamaEditText.error = "Nama Tidak Boleh Kosong"
-                binding.editNamaEditText.requestFocus()
-            }
-
             else if(TextUtils.isEmpty(Objects.requireNonNull(it).alamat)){
                 binding.editAlamatEditText.error = "Alamat Tidak Boleh Kosong"
                 binding.editAlamatEditText.requestFocus()
@@ -76,5 +85,9 @@ class EditContactFragment : Fragment() {
         return binding.root
     }
 
+    override fun onResume() {
+        super.onResume()
+
+    }
 
 }

@@ -1,35 +1,38 @@
 package com.adryanev.dicoding.mycontacts.viewmodels
 
 import android.view.View
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.annotation.MainThread
+import androidx.lifecycle.*
 import com.adryanev.dicoding.mycontacts.data.ContactRepository
 import com.adryanev.dicoding.mycontacts.data.entities.Contact
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 import timber.log.Timber
 
-class EditContactViewModel(repository: ContactRepository, private val id: Int) : ViewModel(){
+class EditContactViewModel( private val repository: ContactRepository, private val id: Int) : ViewModel(){
 
-    val repo = repository
+    val loadTask = null
+
+    val contact = repository.getContact(id)
+    val data = MediatorLiveData<Contact>()
+
     val nama : MutableLiveData<String> = MutableLiveData()
     val nomorHp : MutableLiveData<String> = MutableLiveData()
     val email : MutableLiveData<String> = MutableLiveData()
     val alamat : MutableLiveData<String> = MutableLiveData()
 
-    private var contactMutableLiveData: MutableLiveData<Contact>? = null
     init{
-        val data = repository.getContact(id)
-        nama.value = data.value?.nama
-        nomorHp.value = data.value?.nomorHp
-        email.value = data.value?.nomorHp
-        alamat.value = data.value?.alamat
-
-        Timber.d(alamat.value)
+        data.addSource(contact){
+            nama.value = it.nama
+            nomorHp.value = it.nomorHp
+            email.value = it.email
+            alamat.value = it.alamat
+        }
     }
-    fun getContact(): MutableLiveData<Contact>{
+
+
+    private var contactMutableLiveData: MutableLiveData<Contact>? = null
+    fun saveContact(): MutableLiveData<Contact>{
         if(contactMutableLiveData == null){
             contactMutableLiveData = MutableLiveData()
         }
@@ -45,7 +48,7 @@ class EditContactViewModel(repository: ContactRepository, private val id: Int) :
 
 
      fun updateContact(contact: Contact) = viewModelScope.launch{
-         repo.updateContact(contact)
+         repository.updateContact(contact)
 
      }
 
